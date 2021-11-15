@@ -7,6 +7,25 @@
       fixed
       app
     >
+     <v-list>
+          <v-list-item
+            v-for="(item, i) in items"
+            :key="i"
+            :to="item.to"
+             color="cyan darken-4"
+            router
+            exact
+          >
+            <v-list-item-action>
+              <v-icon>{{ item.icon }}</v-icon>
+            </v-list-item-action>
+            <v-list-item-content>
+              <v-list-item-title v-text="item.title">
+                
+              </v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+        </v-list>
     </v-navigation-drawer>
     <v-app-bar
       :clipped-left="clipped"
@@ -19,9 +38,7 @@
      
     </v-app-bar>
     <v-main>
-      <v-container>
         <nuxt />
-      </v-container>
     </v-main>
     <v-navigation-drawer
       v-model="rightDrawer"
@@ -53,13 +70,20 @@
 export default {
   data () {
     return {
+       items: [
+        {
+          icon: "mdi-apps",
+          title: "Home",
+          to: "/",
+        },
+       ],
       clipped: false,
       drawer: false,
       fixed: false,
       items: [
         {
           icon: 'mdi-apps',
-          title: 'Welcome',
+          title: 'Home',
           to: '/'
         },
         {
@@ -71,7 +95,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'Assessment App'
+      title: 'Loan Assessment App'
     }
   }
 }

@@ -1,14 +1,14 @@
 <template>
     <div>
-        <v-card-title class="display-1">Create client</v-card-title>
-           <v-btn dense rounded dark color="amber darken-2" small @click="openUserDialog()">Create Client<v-icon>mdi-account-circle-outline</v-icon></v-btn>
+        <v-card-title class="display-1">Create Quote</v-card-title>
+           <v-btn dense rounded dark color="amber darken-2" small @click="openUserDialog()">Create Quote<v-icon>mdi-account-circle-outline</v-icon></v-btn>
       <br/>
       <br/>
       <v-dialog persistent v-model="userDialog">
           <v-card>
            <v-toolbar>
                     <v-card-title class="headline">
-                     Add a client
+                     Request for Quote
                     </v-card-title>
                     <v-spacer></v-spacer>
                     <v-btn color="red" text @click="userDialog = false">
@@ -41,7 +41,7 @@
                             <v-btn rounded dense small color="success" @click="addAddress()">Add another address</v-btn>
                         </v-col>
                     </v-row>   
-                    <v-btn dark rounded color="amber darken-2" @click="postClient()">Add<v-icon>mdi-check-bold</v-icon></v-btn>
+                    <v-btn dark rounded color="amber darken-2" @click="postClient()">Send Quote Request<v-icon>mdi-check-bold</v-icon></v-btn>
                 </div>
                     </v-card>
                 </v-dialog>
@@ -49,7 +49,7 @@
            <div>
            </div>
            <br/>
-                       <v-dialog
+      <v-dialog
       v-model="dialog"
       hide-overlay
       persistent

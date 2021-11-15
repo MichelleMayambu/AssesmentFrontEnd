@@ -1,6 +1,6 @@
 <template>
     <div>
-        <v-card-title class="display-1">Client List</v-card-title>
+        <v-card-title class="display-1">QuoteList</v-card-title>
          <v-btn dense rounded dark color="success" small @click="refreshList()">Refresh<v-icon>mdi-refresh</v-icon></v-btn>
            <v-btn dense rounded dark color="amber darken-2" small @click="csvExport(clientList)">Export<v-icon>mdi-upload</v-icon></v-btn>
         <v-simple-table>
@@ -62,7 +62,7 @@
         dark
       >
         <v-card-text>
-         generating client list...........
+         generating quote list...........
           <v-progress-linear
             indeterminate
             color="white"
